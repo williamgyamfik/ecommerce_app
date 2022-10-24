@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+li{
+  list-style: none;
+} 
+
+.front-box-sizing{
+  width: 424px
+} 
+
+.front-view-card{
+  background: rgba(12, 143, 204, 0.717);
+} 
+
+.category-image{
+  width: 300px;
+  height: 350px;
+  background-size: cover;
+} 

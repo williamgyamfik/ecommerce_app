@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <NavBar />
-
+      {/* Use font awesome  for project */}
       <div className="mt-5">
         <BrowserRouter>
           <Routes>

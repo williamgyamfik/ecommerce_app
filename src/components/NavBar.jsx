@@ -1,6 +1,6 @@
 const NavBar = () => {
   return (
-    <nav className="d-flex justify-content-between navbar fixed-top navbar-expand-lg bg-light p-2 bg-light">
+    <nav className="d-flex justify-content-between navbar fixed-top navbar-expand-lg text-white p-2 ">
       <div className="d-flex justify-content-between ms-4">
         <div className="me-4">
           <li>

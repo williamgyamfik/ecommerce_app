@@ -1,33 +1,40 @@
-import clothing from "../images/clothing.jpg";
+// import clothing from "../images/clothing.jpg";
 import jewellery from "../images/jewellery.jpg";
 import electronics from "../images/electronics.jpg";
+import menClothing from "../images/menClothing.jpg";
+import womenClothing from "../images/womenClothing.jpg";
 
 import CardItem from "../components/CardItem";
+
+import { Link } from "react-router-dom";
 
 const categories = [
   {
     id: 1,
-    name: "electronics",
+    name: "Electronics",
     image: electronics,
   },
-  { id: 2, name: "jewellery", image: jewellery },
+  { id: 2, name: "Jewellery", image: jewellery },
   {
     id: 3,
-    name: "men's clothing",
-    image: clothing,
+    name: "Men's clothing",
+    image: menClothing,
   },
   {
     id: 4,
-    name: "women's clothing",
-    image: clothing,
+    name: "Women's clothing",
+    image: womenClothing,
   },
 ];
 
 const Category = () => {
   return (
     <>
-      <h2>Category</h2>
-      <div className="d-flex justify-content-center">
+      <h4 className="text-center mt-5 " style={{ color: "#FF6A3D" }}>
+        Category
+      </h4>
+
+      <div className="d-flex justify-content-center container">
         {categories.map((category) => {
           return (
             <CardItem

@@ -45,3 +45,75 @@ li {
   column-gap: 3.2rem;
   row-gap: 2.4rem;
 }
+
+.form-section {
+  padding-top: 4.8rem;
+  padding-right: 0px;
+  padding-bottom: 12.8rem;
+  padding-left: 0px;
+}
+
+.form-container {
+  max-width: 100rem;
+    padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.form-box-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0 0 0 /15%);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+}
+
+.form-box-text {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: black;
+}
+
+.form-box-heading {
+  color: black;
+  margin-bottom: 3.2rem;
+}
+
+.form-image-box {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(235, 151, 78, 0.3));
+  background-size: cover;
+  background-position: center;
+
+}
+
+.signUpForm label{
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+} 
+
+.signUpForm input{
+  width: 50%;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  background-color: white;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0 0 0 /15%);
+}
+
+.signUpForm select{
+  width: 50%;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  background-color: white;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0 0 0 /15%);
+}
+
+/* .btn-form{
+  align-self: end;
+  padding: 0.2rem;
+} */
+

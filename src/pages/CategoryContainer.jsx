@@ -6,6 +6,7 @@ import MenClothing from "./MenClothing";
 
 const CategoryContainer = () => {
   const params = useParams();
+
   if (params.categoryId === "1") {
     return <Electronics />;
   } else if (params.categoryId === "2") {

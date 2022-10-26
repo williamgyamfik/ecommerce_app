@@ -34,7 +34,7 @@ const Category = () => {
         Category
       </h4>
 
-      <div className="d-flex justify-content-center container">
+      <div className="d-flex justify-content-center container ">
         {categories.map((category) => {
           return (
             <CardItem

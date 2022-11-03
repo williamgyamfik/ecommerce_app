@@ -22,6 +22,20 @@ const Electronics = () => {
       <h1>This is a Electronics Page</h1>
 
       <Link to="/">Back to Home page</Link>
+      {shoppingItems?.map((shoppingItem) => {
+        return (
+          <div className="container text-center" key={shoppingItem.id}>
+            <div className="row">
+              <div className="col">
+                <p>{shoppingItem.image}</p>
+              </div>
+              <div className="col">
+                <p>{`${"$"} ${shoppingItem.price}`}</p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </>
   );
 };

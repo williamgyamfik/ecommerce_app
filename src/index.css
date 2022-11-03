@@ -7,12 +7,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
 nav {
   background-color: #1a2238;
 }
 
-h1,
-h4 {
+h1 {
   font-family: "Fredoka One";
 }
 
@@ -39,81 +48,106 @@ li {
   background-size: cover;
 }
 
-.signUpForm {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 3.2rem;
-  row-gap: 2.4rem;
+.emUits {
+  font-size: 50px;
+}
+.emUits h1 {
+  padding: 1.5em;
+  font-size: 3.5em;
 }
 
-.form-section {
-  padding-top: 4.8rem;
-  padding-right: 0px;
-  padding-bottom: 12.8rem;
-  padding-left: 0px;
+.category {
+  font-size: 16px;
 }
 
-.form-container {
-  max-width: 100rem;
-    padding: 0 3.2rem;
-  margin: 0 auto;
+.category img {
+  height: 30em;
+  width: 25em;
+}
+.category p {
+  font-size: 2em;
 }
 
-.form-box-container {
+.formSection {
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+}
+
+.formSectionBox {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.formContainer {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  box-shadow: 0 2.4rem 4.8rem rgba(0 0 0 /15%);
-  border-radius: 11px;
-  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
-  overflow: hidden;
+  background-color: #e67e22;
+  border-radius: 10px;
 }
 
-.form-box-text {
-  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-  color: black;
+.formdetails {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 12rem;
 }
 
-.form-box-heading {
-  color: black;
-  margin-bottom: 3.2rem;
+.signup-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
 }
 
-.form-image-box {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(235, 151, 78, 0.3));
-  background-size: cover;
-  background-position: center;
-
+.formImage {
+  background-image: url("../src/images/womenWithSale.jpg");
+  background-color: #e67e22;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
-.signUpForm label{
+.formdetails h2 {
+  padding-bottom: 5rem;
+}
+
+.signup-form label {
   display: block;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin-bottom: 1.2rem;
-} 
-
-.signUpForm input{
-  width: 50%;
-  padding: 0.2rem;
-  font-size: 1.2rem;
-  background-color: white;
-  border-radius: 9px;
-  box-shadow: 0 1px 2px rgba(0 0 0 /15%);
+  padding-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-.signUpForm select{
-  width: 50%;
-  padding: 0.2rem;
-  font-size: 1.2rem;
+.signup-form,
+input,
+select {
+  padding: 1.2rem;
+  width: 100%;
+  font-family: inherit;
   background-color: white;
-  border-radius: 9px;
-  box-shadow: 0 1px 2px rgba(0 0 0 /15%);
+  border-radius: 20px;
 }
 
-/* .btn-form{
-  align-self: end;
-  padding: 0.2rem;
-} */
+@media (max-width: 37em) {
+  .formImage {
+    height: 32rem;
+    grid-row: 1;
+  }
+}
 
+@media (max-width: 37em) {
+  .formdetails {
+    padding: 3.2rem;
+  }
+}
+
+@media (max-width: 37em) {
+  .formContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 59em) {
+  .formContainer {
+    grid-template-columns: 1fr;
+    width: 48rem;
+  }
+}

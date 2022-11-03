@@ -30,11 +30,11 @@ const categories = [
 const Category = () => {
   return (
     <>
-      <h4 className="text-center mt-5 " style={{ color: "#FF6A3D" }}>
+      <h1 className="text-center mt-5 " style={{ color: "#FF6A3D" }}>
         Category
-      </h4>
+      </h1>
 
-      <div className="d-flex justify-content-center container ">
+      <div className="d-flex justify-content-center  flex-sm-wrap">
         {categories.map((category) => {
           return (
             <CardItem

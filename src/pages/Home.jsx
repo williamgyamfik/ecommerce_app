@@ -2,7 +2,8 @@ import Category from "./Category";
 
 import shoppingWoman from "../images/womanShopping.png";
 import Carousel from "../components/Carousel";
-import ContactForm from "../components/ContactForm";
+
+import Form from "../components/Form";
 
 const Home = () => {
   return (
@@ -26,15 +27,27 @@ const Home = () => {
       <Category />
 
       <div
-        className="mt-5 container-lg"
-        style={{ height: "250px", backgroundColor: "#1A2238" }}
+        className="mt-5"
+        style={{ height: "500px", backgroundColor: "#1A2238" }}
       >
-        <h4 className="text-center pt-3" style={{ color: "#FF6A3D" }}>
+        <h1 className="text-center pt-3" style={{ color: "#FF6A3D" }}>
           Special offers
-        </h4>
+        </h1>
+        <h2 className="text-center pt-3" style={{ color: "#FF6A3D" }}>
+          <span
+            style={{ color: "black", background: "white", fontSize: "2em" }}
+          >
+            Black
+          </span>{" "}
+          Friday Sales
+        </h2>
         <Carousel />
       </div>
-      <ContactForm />
+
+      <Form />
+      <div className="emUits">
+        <h1>This is a result of em css</h1>
+      </div>
     </>
   );
 };

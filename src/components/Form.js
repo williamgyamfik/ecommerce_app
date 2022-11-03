@@ -1,21 +1,13 @@
-import { useState } from "react";
-import { Form } from "react-router-dom";
-import sale from "../images/sale.jpg";
-
-const ContactForm = () => {
-  const submitHandler = (e) => {
-    e.preventDefault();
-  };
-
+const Form = () => {
   return (
-    <section className="form-section">
-      <div className="form-container ">
-        <div className="form-box-container">
-          <div className="form-box-text">
-            <h2 className="form-box-heading">
-              Not yet a user? Sign up and get 10% discount on your first order
+    <section className="formSection">
+      <div className="formSectionBox">
+        <div className="formContainer">
+          <div className="formdetails">
+            <h2>
+              Not yet a user? Signup and get 10% discount on your first order
             </h2>
-            <form className="signUpForm">
+            <form className="signup-form">
               <div>
                 <label htmlFor="full-name">Full name</label>
                 <input
@@ -48,24 +40,16 @@ const ContactForm = () => {
                   <option value="google">Google</option>
                 </select>
               </div>
-              <div>
-                <button className="btn-form"> Sign up</button>
+              <div className="btn ">
+                <button>Signup</button>
               </div>
             </form>
           </div>
-          {/* <div> */}
-          <img
-            src={sale}
-            alt=""
-            // style={{ width: "800px", height: "1000px" }}
-            className="form-image-box"
-            label="women with sales bag"
-          />
-          {/* </div> */}
+          <div className="formImage" role="img" label="salesWomen"></div>
         </div>
       </div>
     </section>
   );
 };
 
-export default ContactForm;
+export default Form;

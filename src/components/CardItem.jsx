@@ -5,7 +5,6 @@ const CardItem = (props) => {
     <div className="d-flex justify-content-between shadow-lg category">
       <div className="p-2 ">
         <img src={props.image} />
-        {/* //style={{ width: "100px", height: "120px" }} */}
         <div>
           <Link to={`/category/${props.id}`}>
             <p className="text-center" style={{ color: "#FF6A3D" }}>

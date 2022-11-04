@@ -1,9 +1,9 @@
 import Category from "./Category";
-
-import shoppingWoman from "../images/womanShopping.png";
 import Carousel from "../components/Carousel";
-
 import Form from "../components/Form";
+import shoppingWoman from "../images/womanShopping.png";
+
+import { useState } from "react";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <div className="d-flex justify-content-center front-view-card text-light">
         <div className="front-box-sizing p-5">
           <h1 className="text-center">
-            ONLINE SHOPPING MADE{" "}
+            ONLINE SHOPPING MADE
             <span style={{ color: "#FF6A3D" }}> EASY </span>
           </h1>
           <p>
@@ -25,7 +25,6 @@ const Home = () => {
         </div>
       </div>
       <Category />
-
       <div
         className="mt-5"
         style={{ height: "500px", backgroundColor: "#1A2238" }}

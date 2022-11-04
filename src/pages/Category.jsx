@@ -27,14 +27,14 @@ const categories = [
   },
 ];
 
-const Category = () => {
+const Category = (props) => {
   return (
     <>
       <h1 className="text-center mt-5 " style={{ color: "#FF6A3D" }}>
         Category
       </h1>
 
-      <div className="d-flex justify-content-center  flex-sm-wrap">
+      <div className="d-flex justify-content-center ">
         {categories.map((category) => {
           return (
             <CardItem

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import CategoryCardItem from "../components/CategoryCardItem";
 
 const Jewellery = () => {
   const [shoppingItems, setShoppingItems] = useState([]);
@@ -19,9 +20,24 @@ const Jewellery = () => {
 
   return (
     <>
-      <h1>This is a Jewellery Page</h1>
-
-      <Link to="/">Back to Home page</Link>
+      <button>
+        <Link to="/">Back to Home page</Link>
+      </button>
+      <h1 className="text-center"> Jewellery </h1>
+      <div className="p-5 d-flex flex-column container">
+        <div className="row row-cols-3 g-1">
+          {shoppingItems?.map((shoppingItem) => {
+            return (
+              <CategoryCardItem
+                key={shoppingItem.id}
+                image={shoppingItem.image}
+                price={shoppingItem.price}
+                title={shoppingItem.title}
+              />
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 };

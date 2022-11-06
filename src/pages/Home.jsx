@@ -1,9 +1,7 @@
 import Category from "./Category";
 import Carousel from "../components/Carousel";
-import Form from "../components/Form";
 import shoppingWoman from "../images/womanShopping.png";
-
-import { useState } from "react";
+import Form from "../components/Form";
 
 const Home = () => {
   return (
@@ -42,7 +40,6 @@ const Home = () => {
         </h2>
         <Carousel />
       </div>
-
       <Form />
       <div className="emUits">
         <h1>This is a result of em css</h1>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CategoryCardItem from "../components/CategoryCardItem";
 import Spinner from "../components/Spinner";
+import ShoppingPageBackButton from "../components/ShoppingPageBackButton";
 
 const Electronics = () => {
   const [shoppingItems, setShoppingItems] = useState([]);
@@ -33,14 +34,12 @@ const Electronics = () => {
 
   return (
     <>
-      <button>
-        <Link to="/">Back to Home page</Link>
-      </button>
       <h1 className="text-center"> Electronics </h1>
       {loading ? (
         <Spinner />
       ) : (
         <div className="p-5 d-flex flex-column container-sm">
+          <ShoppingPageBackButton />
           <div className="row row-cols-3 g-1">
             {shoppingItems?.map((shoppingItem) => {
               return (

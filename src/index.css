@@ -67,7 +67,7 @@ li {
 .category p {
   font-size: 2em;
 }
-
+/* 
 .formSection {
   padding-top: 10rem;
   padding-bottom: 15rem;
@@ -150,4 +150,6 @@ select {
     grid-template-columns: 1fr;
     width: 48rem;
   }
-}
+} */
+
+

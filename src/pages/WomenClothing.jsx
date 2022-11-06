@@ -1,18 +1,26 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CategoryCardItem from "../components/CategoryCardItem";
+import Spinner from "../components/Spinner";
+import ShoppingPageBackButton from "../components/ShoppingPageBackButton";
 
 const MenClothing = () => {
   const [shoppingItems, setShoppingItems] = useState([]);
+  const [loading, setloading] = useState(false);
 
   const fetchData = () => {
+    setloading(true);
     fetch("https://fakestoreapi.com/products/category/women's%20clothing")
       .then((response) => {
+        setloading(false);
         return response.json();
       })
       .then((data) => {
         console.log(data);
         setShoppingItems(data);
+      })
+      .catch((error) => {
+        console.log(error.message);
       });
   };
 
@@ -20,24 +28,26 @@ const MenClothing = () => {
 
   return (
     <>
-      <button>
-        <Link to="/">Back to Home page</Link>
-      </button>
       <h1 className="text-center"> Women Clothing </h1>
-      <div className="p-5 d-flex flex-column">
-        <div className="row row-cols-3 g-1">
-          {shoppingItems?.map((shoppingItem) => {
-            return (
-              <CategoryCardItem
-                key={shoppingItem.id}
-                image={shoppingItem.image}
-                price={shoppingItem.price}
-                title={shoppingItem.title}
-              />
-            );
-          })}
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="p-5 d-flex flex-column container">
+          <ShoppingPageBackButton />
+          <div className="row row-cols-3 g-1">
+            {shoppingItems?.map((shoppingItem) => {
+              return (
+                <CategoryCardItem
+                  key={shoppingItem.id}
+                  image={shoppingItem.image}
+                  price={shoppingItem.price}
+                  title={shoppingItem.title}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

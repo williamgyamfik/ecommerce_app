@@ -34,7 +34,7 @@ li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -72,20 +72,21 @@ a{
   font-size: 2em;
 }
 
-.shoppingCart{
+.shoppingCart {
   z-index: 70;
   min-height: 80vh;
-  position:absolute;
+  position: absolute;
   right: 2rem;
   top: 2.5vh;
   width: 500px;
+  background-color: #ffff;
 }
 
-.shoppingCartIcon{
+.shoppingCartIcon {
   cursor: pointer;
 }
 
-.shoppingCartCloseButton{
+.shoppingCartCloseButton {
   background-color: white;
   border-radius: 5px;
   height: 2rem;
@@ -95,7 +96,7 @@ a{
   top: 25px;
 }
 
-.basketContent{
+.basketContent {
   flex: 1 1;
   margin: 10px 0;
   max-height: 450px;
@@ -105,12 +106,53 @@ a{
   padding-right: 20px;
 }
 
-.basketCard{
+.basketCard {
   display: grid;
   grid-template-columns: 2fr 2.5fr 1fr;
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  color: black
+  color: black;
 }
+
+.basketCardImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basketCardImage {
+  max-height: 120px;
+  max-width: 70%;
+}
+
+.basketCardDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0px, 10px;
+}
+
+.basketCardTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.basketCardPrice{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.basketCardDeleteContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basketCardDeleteIcon{
+  height: 3rem;
+  width: 3rem;
+}
+

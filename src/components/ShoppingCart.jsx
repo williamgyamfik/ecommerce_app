@@ -9,11 +9,18 @@ const ShoppingCart = () => {
   const showCartItemHandler = () => {
     setShowCartItem(true);
   };
+
+  const hideCarthandler = (data) => {
+    setShowCartItem(data);
+  };
+
   return (
     <div className="shoppingCartIcon">
-      <FontAwesomeIcon icon={faCartShopping} />
-      <button onClick={showCartItemHandler}></button>
+      <button onClick={showCartItemHandler}>
+        <FontAwesomeIcon icon={faCartShopping} />
+      </button>
       {showCartItem && <ShoppingCartItems />}
+      {showCartItem && <ShoppingCartItems setCloseCart={hideCarthandler} />}
     </div>
   );
 };

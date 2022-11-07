@@ -28,10 +28,6 @@ const Electronics = () => {
 
   useEffect(fetchData, []);
 
-  // if (loading) {
-  //   return <Spinner />;
-  // }
-
   return (
     <>
       <h1 className="text-center"> Electronics </h1>

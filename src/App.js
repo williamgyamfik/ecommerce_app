@@ -5,9 +5,6 @@ import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import Category from "./pages/Category";
-import Electronics from "./pages/Electronics";
-import Jewellery from "./pages/Jewellery";
-import Clothing from "./pages/WomenClothing";
 import ErrorPage from "./pages/Error";
 import CategoryContainer from "./pages/CategoryContainer";
 
@@ -15,7 +12,6 @@ function App() {
   return (
     <>
       <NavBar />
-      {/* Use font awesome  for project */}
       <div className="mt-5">
         <BrowserRouter>
           <Routes>
@@ -25,10 +21,7 @@ function App() {
               path="/category/:categoryId"
               element={<CategoryContainer />}
             />
-            {/* <Route path="/category/electronics" element={<Electronics />} />
-          <Route path="/category/jewellery" element={<Jewellery />} />
-          <Route path="/category/clothing" element={<Clothing />} /> */}
-            <Route path="*" element={<ErrorPage />} />
+            <Route path="*" element={<ErrorPage />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

@@ -2,11 +2,7 @@ import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useState } from "react";
-
 const ShoppingCartItems = (props) => {
-  const [closeCart, setCloseCart] = useState(true);
-
   const closeCartHandler = () => {
     props.setCloseCart(false);
   };
@@ -33,6 +29,15 @@ const ShoppingCartItems = (props) => {
               <FontAwesomeIcon icon={faTrashCan} />
             </button>
           </div>
+        </div>
+      </div>
+      <div className="contentSummary">
+        <div className="d-flex justify-content-evenly mb-3">
+          <p>Items :</p>
+          <p>Total :</p>
+        </div>
+        <div className="text-center">
+          <button className="btn btn-success pt-2">Proceed to checkout</button>
         </div>
       </div>
     </div>

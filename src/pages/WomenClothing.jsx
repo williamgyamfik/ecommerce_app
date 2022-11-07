@@ -16,7 +16,6 @@ const MenClothing = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setShoppingItems(data);
       })
       .catch((error) => {

@@ -79,7 +79,7 @@ a {
   right: 2rem;
   top: 2.5vh;
   width: 500px;
-  background-color: #ffff;
+  background-color: rgb(235, 72, 72);
 }
 
 .shoppingCartIcon {
@@ -156,3 +156,6 @@ a {
   width: 3rem;
 }
 
+.contentSummary{
+  padding: 20px 40px
+}

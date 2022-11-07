@@ -6,8 +6,6 @@ import womenClothing from "../images/womenClothing.jpg";
 
 import CardItem from "../components/CardItem";
 
-import { Link } from "react-router-dom";
-
 const categories = [
   {
     id: 1,

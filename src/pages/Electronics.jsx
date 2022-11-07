@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CategoryCardItem from "../components/CategoryCardItem";
 import Spinner from "../components/Spinner";
@@ -18,7 +17,6 @@ const Electronics = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setShoppingItems(data);
       })
       .catch((error) => {

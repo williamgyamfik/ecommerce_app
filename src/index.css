@@ -34,6 +34,10 @@ li {
   list-style: none;
 }
 
+a{
+  text-decoration: none;
+}
+
 .front-box-sizing {
   width: 424px;
 }
@@ -67,89 +71,46 @@ li {
 .category p {
   font-size: 2em;
 }
-/* 
-.formSection {
-  padding-top: 10rem;
-  padding-bottom: 15rem;
+
+.shoppingCart{
+  z-index: 70;
+  min-height: 80vh;
+  position:absolute;
+  right: 2rem;
+  top: 2.5vh;
+  width: 500px;
 }
 
-.formSectionBox {
-  padding-left: 10rem;
-  padding-right: 10rem;
+.shoppingCartIcon{
+  cursor: pointer;
 }
 
-.formContainer {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  background-color: #e67e22;
-  border-radius: 10px;
-}
-
-.formdetails {
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 3rem;
-  padding-bottom: 12rem;
-}
-
-.signup-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-.formImage {
-  background-image: url("../src/images/womenWithSale.jpg");
-  background-color: #e67e22;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-.formdetails h2 {
-  padding-bottom: 5rem;
-}
-
-.signup-form label {
-  display: block;
-  padding-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.signup-form,
-input,
-select {
-  padding: 1.2rem;
-  width: 100%;
-  font-family: inherit;
+.shoppingCartCloseButton{
   background-color: white;
-  border-radius: 20px;
+  border-radius: 5px;
+  height: 2rem;
+  min-width: 4rem;
+  position: absolute;
+  right: 10px;
+  top: 25px;
 }
 
-@media (max-width: 37em) {
-  .formImage {
-    height: 32rem;
-    grid-row: 1;
-  }
+.basketContent{
+  flex: 1 1;
+  margin: 10px 0;
+  max-height: 450px;
+  min-height: 300px;
+  overflow-y: scroll;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-@media (max-width: 37em) {
-  .formdetails {
-    padding: 3.2rem;
-  }
+.basketCard{
+  display: grid;
+  grid-template-columns: 2fr 2.5fr 1fr;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  color: black
 }
-
-@media (max-width: 37em) {
-  .formContainer {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 59em) {
-  .formContainer {
-    grid-template-columns: 1fr;
-    width: 48rem;
-  }
-} */
-
-

@@ -14,7 +14,7 @@ const Form = () => {
           style={{ backgroundColor: "#e67e22" }}
         >
           <form className="bg-secondary pt-5 ">
-            <div className="pb-4 pt-2 d-flex justify-content-evenly">
+            <div className="pb-4 pt-2">
               <label htmlFor="full-name" className="fw-bold">
                 Full name*
               </label>
@@ -26,25 +26,25 @@ const Form = () => {
               />
             </div>
 
-            <div className="pb-4 pt-2 d-flex justify-content-evenly">
+            <div className="pb-4 pt-2 ">
               <label htmlFor="e-mail" className="fw-bold">
                 E-mail*
               </label>
               <input
                 type="email"
                 id="e-mail"
-                className="rounded-3 shadow-lg"
+                className="rounded-3 shadow-lg "
                 required
               />
             </div>
-            <div className="pb-4 pt-2 d-flex justify-content-evenly">
+            <div className="pb-4 pt-2 ">
               <label htmlFor="phone-number" className="fw-bold">
                 Phone number*
               </label>
               <input
                 type="text"
                 id="phone-number"
-                className="rounded-3 shadow-lg"
+                className="rounded-3 shadow-lg "
                 required
               />
             </div>

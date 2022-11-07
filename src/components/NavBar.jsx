@@ -1,3 +1,5 @@
+import ShoppingCart from "./ShoppingCart";
+
 const NavBar = () => {
   return (
     <nav className="d-flex justify-content-between navbar fixed-top navbar-expand-lg text-white p-2 ">
@@ -39,6 +41,9 @@ const NavBar = () => {
             </a>
           </li>
         </div>
+      </div>
+      <div className="">
+        <ShoppingCart />
       </div>
     </nav>
   );

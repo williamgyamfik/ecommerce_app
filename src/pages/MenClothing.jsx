@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CategoryCardItem from "../components/CategoryCardItem";
 import Spinner from "../components/Spinner";

@@ -23,6 +23,7 @@ const ShoppingCartItems = (props) => {
           <div className="basketCardDetailsContainer">
             <p className="basketCardTitle">title</p>
             <p className="basketCardPrice">Price</p>
+            <p className="basketCardPrice">Quantity</p>
           </div>
           <div className="basketCardDeleteContainer">
             <button className="basketCardDeleteIcon">

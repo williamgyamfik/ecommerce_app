@@ -1,27 +1,38 @@
 import cartContext from "../store/Cart-context";
-import { useState, useEffect } from "react";
+import { useReducer } from "react";
+
+const defaultState = {
+  items: [],
+  totalAmount: 0,
+};
+
+const cartReducer = (state, action) => {
+  if (action.type === "ADD") {
+    const updatedItems = state.items.concat(action.item);
+    const updatedTotalAmount =
+      state.totalAmount + action.item.price * action.item.amount;
+    return {
+      items: updatedItems,
+      totalAmount: updatedTotalAmount,
+    };
+  }
+  return defaultState;
+};
 
 const CartProvider = (props) => {
-  const [data, setData] = useState([]);
+  const [cartState, dispatch] = useReducer(cartReducer, defaultState);
 
-  const fetchData = () => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-      });
+  const addItemHandler = (item) => {
+    dispatch({ type: "ADD", item: item });
   };
-  useEffect(fetchData, []);
 
-  const addItemHandler = (item) => {};
-
-  const removeItemHandler = (id) => {};
+  const removeItemHandler = (id) => {
+    dispatch({ type: "REMOVE", id: id });
+  };
 
   const cartContextData = {
-    items: data, // insert API state here,
-    totalAmount: 0,
+    items: cartState.items,
+    totalAmount: cartState.totalAmount,
     addItem: addItemHandler,
     removeItem: removeItemHandler,
   };

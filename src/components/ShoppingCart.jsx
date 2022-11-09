@@ -27,7 +27,7 @@ const ShoppingCart = () => {
     <div className="shoppingCartIcon">
       <button onClick={showCartItemHandler} className="">
         <FontAwesomeIcon icon={faCartShopping} />
-        <span class="badge text-bg-secondary">{numberOfCartItems}</span>
+        <span className="badge text-bg-secondary">{numberOfCartItems}</span>
       </button>
       {showCartItem && <ShoppingCartItems />}
       {showCartItem && <ShoppingCartItems setCloseCart={hideCartItemHandler} />}

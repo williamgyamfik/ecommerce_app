@@ -1,40 +1,50 @@
-import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import CartContext from "../store/Cart-context";
+import { useContext } from "react";
+
+import BasketCard from "./BasketCard";
 
 const ShoppingCartItems = (props) => {
   const closeCartHandler = () => {
     props.setCloseCart(false);
   };
 
+  const cartCtx = useContext(CartContext);
+
   return (
     <div className="d-flex flex-column shadow-lg shoppingCart">
-      <h2 className="text-center" style={{ color: "#1A2238" }}>
-        Shopping Cart
+      <h2 className="text-center pt-5" style={{ color: "#1A2238" }}>
+        SHOPPING CART
       </h2>
-      <button className="shoppingCartCloseButton" onClick={closeCartHandler}>
+      <button
+        className="shoppingCartCloseButton"
+        onClick={closeCartHandler}
+        style={{ background: "red", color: "white" }}
+      >
         <FontAwesomeIcon icon={faCircleXmark} />
       </button>
+
       <div className="basketContent">
-        <div className="basketCard">
-          <div className="basketCardImageContainer">
-            <img src="" className="basketCardImage" alt="IMAGE HERE" />
-          </div>
-          <div className="basketCardDetailsContainer">
-            <p className="basketCardTitle">title</p>
-            <p className="basketCardPrice">Price</p>
-            <p className="basketCardPrice">Quantity</p>
-          </div>
-          <div className="basketCardDeleteContainer">
-            <button className="basketCardDeleteIcon">
-              <FontAwesomeIcon icon={faTrashCan} />
-            </button>
-          </div>
-        </div>
+        {cartCtx.items.map((item) => {
+          return (
+            <BasketCard
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              quantity={item.quantity}
+              price={item.price}
+              image={item.image}
+              totalAmount={item.totalAmount}
+            />
+          );
+        })}
       </div>
+
       <div className="contentSummary">
         <div className="d-flex justify-content-evenly mb-3">
-          <p>Items :</p>
           <p>Total :</p>
         </div>
         <div className="text-center">

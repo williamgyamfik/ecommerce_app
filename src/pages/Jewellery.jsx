@@ -34,11 +34,12 @@ const Jewellery = () => {
       ) : (
         <div className="p-5 d-flex flex-column container">
           <ShoppingPageBackButton />
-          <div className="row row-cols-3 g-1">
+          <div className="row row-cols-3 ">
             {shoppingItems?.map((shoppingItem) => {
               return (
                 <CategoryCardItem
                   key={shoppingItem.id}
+                  id={shoppingItem.id}
                   image={shoppingItem.image}
                   price={shoppingItem.price}
                   title={shoppingItem.title}

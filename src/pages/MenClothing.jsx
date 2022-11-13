@@ -38,6 +38,7 @@ const MenClothing = () => {
               return (
                 <CategoryCardItem
                   key={shoppingItem.id}
+                  id={shoppingItem.id}
                   image={shoppingItem.image}
                   price={shoppingItem.price}
                   title={shoppingItem.title}

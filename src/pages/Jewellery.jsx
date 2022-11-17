@@ -18,6 +18,7 @@ const Jewellery = () => {
       })
       .then((data) => {
         setShoppingItems(data);
+        console.log(data);
       })
       .catch((error) => {
         console.log(error.message);
@@ -32,7 +33,7 @@ const Jewellery = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="p-5 d-flex flex-column container">
+        <div className="container pt-5">
           <ShoppingPageBackButton />
           <div className="row row-cols-3 ">
             {shoppingItems?.map((shoppingItem) => {
@@ -43,6 +44,8 @@ const Jewellery = () => {
                   image={shoppingItem.image}
                   price={shoppingItem.price}
                   title={shoppingItem.title}
+                  description={shoppingItem.description}
+                  rating={shoppingItem.rating}
                 />
               );
             })}

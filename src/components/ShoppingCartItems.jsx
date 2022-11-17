@@ -22,7 +22,13 @@ const ShoppingCartItems = (props) => {
       <button
         className="shoppingCartCloseButton"
         onClick={closeCartHandler}
-        style={{ background: "red", color: "white" }}
+        style={{
+          background: "red",
+          color: "white",
+          border: "none",
+          height: "1.5rem",
+          width: "0.2rem",
+        }}
       >
         <FontAwesomeIcon icon={faCircleXmark} />
       </button>
@@ -44,8 +50,8 @@ const ShoppingCartItems = (props) => {
       </div>
 
       <div className="contentSummary">
-        <div className="d-flex justify-content-evenly mb-3">
-          <p>Total :</p>
+        <div className="mb-3">
+          <p>Total :{cartCtx.totalAmount} </p>
         </div>
         <div className="text-center">
           <button className="btn btn-success pt-2">Proceed to checkout</button>

@@ -24,7 +24,8 @@ const ShoppingCart = () => {
   }, 0);
 
   return (
-    <div className="shoppingCartIcon">
+    <div className="shoppingCartIcon ">
+      Your cart
       <button onClick={showCartItemHandler}>
         <FontAwesomeIcon icon={faCartShopping} />
         <span className="badge text-bg-secondary">{numberOfCartItems}</span>

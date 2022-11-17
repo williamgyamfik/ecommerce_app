@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const CardItem = (props) => {
   return (
-    <div className="d-flex justify-content-between shadow-lg category">
+    <div className="d-flex justify-content-between shadow-lg category ">
       <div className="p-2 ">
         <img src={props.image} />
         <div>

@@ -32,7 +32,7 @@ const Category = (props) => {
         Category
       </h1>
 
-      <div className="d-flex justify-content-center ">
+      <div className=" d-flex justify-content-center flex-wrap">
         {categories.map((category) => {
           return (
             <CardItem

@@ -32,9 +32,9 @@ const Electronics = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="p-5 d-flex flex-column container-sm">
+        <div className="container pt-5">
           <ShoppingPageBackButton />
-          <div className="row row-cols-3 g-1">
+          <div className="row row-cols-3">
             {shoppingItems?.map((shoppingItem) => {
               return (
                 <CategoryCardItem

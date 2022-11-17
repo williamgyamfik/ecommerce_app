@@ -8,6 +8,7 @@ import Category from "./pages/Category";
 import ErrorPage from "./pages/Error";
 import CategoryContainer from "./pages/CategoryContainer";
 import CartProvider from "./store/CartProvider";
+import { Modal } from "bootstrap";
 
 function App() {
   return (

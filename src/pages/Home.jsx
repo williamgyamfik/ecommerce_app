@@ -12,7 +12,7 @@ const Home = () => {
             ONLINE SHOPPING MADE
             <span style={{ color: "#FF6A3D" }}> EASY </span>
           </h1>
-          <p>
+          <p className="fs-5">
             Browse through our quality online products and have them delivered
             to you at your doorstep
           </p>
@@ -23,10 +23,7 @@ const Home = () => {
         </div>
       </div>
       <Category />
-      <div
-        className="mt-5"
-        style={{ height: "500px", backgroundColor: "#1A2238" }}
-      >
+      <div className="mt-5 pb-5" style={{ backgroundColor: "#FF6A3D" }}>
         <h1 className="text-center pt-3" style={{ color: "#FF6A3D" }}>
           Special offers
         </h1>
@@ -34,16 +31,15 @@ const Home = () => {
           <span
             style={{ color: "black", background: "white", fontSize: "2em" }}
           >
-            Black
-          </span>{" "}
-          Friday Sales
+            <p>
+              Black Friday Sales <span style={{ color: "green" }}>25% </span>{" "}
+              off
+            </p>
+          </span>
         </h2>
-        <Carousel />
+        {/* <Carousel /> */}
       </div>
       <Form />
-      <div className="emUits">
-        <h1>This is a result of em css</h1>
-      </div>
     </>
   );
 };

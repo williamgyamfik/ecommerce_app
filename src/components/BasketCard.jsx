@@ -7,7 +7,7 @@ const BasketCard = (props) => {
   return (
     <div className="basketCard" key={props.id}>
       <div className="basketCardImageContainer">
-        <img src={props.image} className="basketCardImage" alt="IMAGE HERE" />
+        <img src={props.image} className="basketCardImage" alt=" " />
       </div>
       <div className="basketCardDetailsContainer">
         <p className="basketCardTitle">{props.title}</p>

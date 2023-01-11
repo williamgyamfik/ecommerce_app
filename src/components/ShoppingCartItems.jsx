@@ -50,8 +50,11 @@ const ShoppingCartItems = (props) => {
       </div>
 
       <div className="contentSummary">
-        <div className="mb-3">
-          <p>Total :{cartCtx.totalAmount} </p>
+        <div className="mb-3 d-flex justify-content-around">
+          <p className="fs-4 fw-bold">
+            Total: ${cartCtx.totalAmount.toFixed(2)}
+          </p>
+          <p className="fs-4 fw-bold">Items: {`${cartCtx.items.length}`}</p>
         </div>
         <div className="text-center">
           <button className="btn btn-success pt-2">Proceed to checkout</button>

@@ -52,32 +52,6 @@ a {
   background-size: cover;
 }
 
-.emUits {
-  font-size: 50px;
-}
-.emUits h1 {
-  padding: 1.5em;
-  font-size: 3.5em;
-}
-
-/* @media screen and (max-width: 600px) {
-  .label_size, .input_size, input[type=text] {
-    width: 100%;
-    color: red;
-  }
-} */
-
-
-/* @media screen and (max-width: 900px) {
-  .label_size, .input_size, input[type=text] {
-    width: 100%;
-    color: red;
-    display:grid;
-    grid-template-columns: 1fr;
-  }
-} */
-
-
 .category {
   font-size: 10px;
 }
@@ -102,10 +76,6 @@ a {
 
 .shoppingCartIcon {
   cursor: pointer;
-  /* width: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end; */
 }
 
 .shoppingCartCloseButton {
@@ -184,4 +154,16 @@ a {
 .contentSummary {
   padding: 20px 40px;
   color: #000;
+}
+
+.formCard {
+  width: 50rem;
+  /* background-image: linear-gradient(to right,  rgba(255,106,61,0.2), rgba(255,106,61,0.8)); */
+}
+
+.formImage{
+
+  height: 10rem;
+  width: 10rem;
+
 }

@@ -31,6 +31,9 @@ const CategoryCardItem = (props) => {
     });
   };
 
+  const matchingId = cartCtx.items.find((item) => item.id === props.id);
+  // console.log(matchingId);
+
   return (
     <div className="px-2 py-5  cols-3" id={props.id}>
       <div className="d-flex justify-content-center align-items-center bg-transparent h-75 w-100 g-1">
@@ -89,6 +92,7 @@ const CategoryCardItem = (props) => {
             role="button"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
+            onClick={matchingId}
           >
             <FontAwesomeIcon icon={faCircleInfo} /> More...
           </a>

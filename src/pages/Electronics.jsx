@@ -34,16 +34,20 @@ const Electronics = () => {
       ) : (
         <div className="container pt-5">
           <ShoppingPageBackButton />
-          <div className="row row-cols-3">
+          <div className="row">
             {shoppingItems?.map((shoppingItem) => {
               return (
-                <CategoryCardItem
+                <div
+                  className="col-sm-12 col-md-6 col-lg-4"
                   key={shoppingItem.id}
-                  id={shoppingItem.id}
-                  image={shoppingItem.image}
-                  price={shoppingItem.price}
-                  title={shoppingItem.title}
-                />
+                >
+                  <CategoryCardItem
+                    id={shoppingItem.id}
+                    image={shoppingItem.image}
+                    price={shoppingItem.price}
+                    title={shoppingItem.title}
+                  />
+                </div>
               );
             })}
           </div>

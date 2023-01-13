@@ -35,12 +35,13 @@ const CategoryCardItem = (props) => {
   // console.log(matchingId);
 
   return (
-    <div className="px-2 py-5  cols-3" id={props.id}>
+    <div className="px-2 py-5" id={props.id}>
       <div className="d-flex justify-content-center align-items-center bg-transparent h-75 w-100 g-1">
         <img
           src={props.image}
           className="g-1 bg-image hover-zoom"
           style={{ width: "270px", height: "250px" }}
+          alt=""
         />
       </div>
 
@@ -93,6 +94,7 @@ const CategoryCardItem = (props) => {
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
             onClick={matchingId}
+            href=" "
           >
             <FontAwesomeIcon icon={faCircleInfo} /> More...
           </a>

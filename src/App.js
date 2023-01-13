@@ -12,24 +12,22 @@ import { Modal } from "bootstrap";
 
 function App() {
   return (
-    <>
-      <CartProvider>
-        <NavBar />
-        <div className="mt-5">
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/category" element={<Category />} exact />
-              <Route
-                path="/category/:categoryId"
-                element={<CategoryContainer />}
-              />
-              <Route path="*" element={<ErrorPage />}></Route>
-            </Routes>
-          </BrowserRouter>
-        </div>
-      </CartProvider>
-    </>
+    <CartProvider>
+      <NavBar />
+      <div className="mt-5">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/category" element={<Category />} exact />
+            <Route
+              path="/category/:categoryId"
+              element={<CategoryContainer />}
+            />
+            <Route path="*" element={<ErrorPage />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </CartProvider>
   );
 }
 

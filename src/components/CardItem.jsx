@@ -2,14 +2,13 @@ import { Link } from "react-router-dom";
 
 const CardItem = (props) => {
   return (
-    <div className="d-flex justify-content-between shadow-lg category ">
-      <div className="p-2 ">
-        <img src={props.image} />
-        <div>
+    <div className="container">
+      <div className="card text-bg-dark">
+        <img src={props.image} className="card-img category-image" alt="..." />
+        <div className="card-img-overlay">
+          <h1 className="card-text text-dark"> {props.name}</h1>
           <Link to={`/category/${props.id}`}>
-            <p className="text-center" style={{ color: "#FF6A3D" }}>
-              {props.name}
-            </p>
+            <button className=" btn btn-warning text-center">Shop now</button>
           </Link>
         </div>
       </div>

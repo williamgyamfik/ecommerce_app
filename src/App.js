@@ -8,14 +8,15 @@ import Category from "./pages/Category";
 import ErrorPage from "./pages/Error";
 import CategoryContainer from "./pages/CategoryContainer";
 import CartProvider from "./store/CartProvider";
-import { Modal } from "bootstrap";
+// import { Modal } from "bootstrap";
+import AllCategory from "./pages/AllCategory";
 
 function App() {
   return (
     <CartProvider>
-      <NavBar />
       <div className="mt-5">
         <BrowserRouter>
+          <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/category" element={<Category />} exact />
@@ -23,6 +24,7 @@ function App() {
               path="/category/:categoryId"
               element={<CategoryContainer />}
             />
+            <Route path="/allcategory" element={<AllCategory />} />
             <Route path="*" element={<ErrorPage />}></Route>
           </Routes>
         </BrowserRouter>

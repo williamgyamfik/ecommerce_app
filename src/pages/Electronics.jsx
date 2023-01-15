@@ -28,12 +28,12 @@ const Electronics = () => {
 
   return (
     <>
-      <h1 className="text-center"> Electronics </h1>
       {loading ? (
         <Spinner />
       ) : (
         <div className="container pt-5">
           <ShoppingPageBackButton />
+          <h1 className="text-center"> Electronics </h1>
           <div className="row">
             {shoppingItems?.map((shoppingItem) => {
               return (

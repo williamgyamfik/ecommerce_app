@@ -27,22 +27,24 @@ const MenClothing = () => {
 
   return (
     <>
-      <h1 className="text-center"> Men Clothing </h1>
       {loading ? (
         <Spinner />
       ) : (
         <div className="container pt-5">
           <ShoppingPageBackButton />
-          <div className="row row-cols-3">
+          <h1 className="text-center"> Men Clothing </h1>
+          <div className="row">
             {shoppingItems?.map((shoppingItem) => {
               return (
-                <CategoryCardItem
-                  key={shoppingItem.id}
-                  id={shoppingItem.id}
-                  image={shoppingItem.image}
-                  price={shoppingItem.price}
-                  title={shoppingItem.title}
-                />
+                <div className="col-sm-12 col-md-6 col-lg-4">
+                  <CategoryCardItem
+                    key={shoppingItem.id}
+                    id={shoppingItem.id}
+                    image={shoppingItem.image}
+                    price={shoppingItem.price}
+                    title={shoppingItem.title}
+                  />
+                </div>
               );
             })}
           </div>

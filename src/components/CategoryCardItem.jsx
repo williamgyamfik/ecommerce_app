@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 import CartContext from "../store/Cart-context";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useContext } from "react";
 
 import Modal from "./Modal";
@@ -32,14 +32,13 @@ const CategoryCardItem = (props) => {
   };
 
   const matchingId = cartCtx.items.find((item) => item.id === props.id);
-  // console.log(matchingId);
 
   return (
     <div className="px-2 py-5" id={props.id}>
       <div className="d-flex justify-content-center align-items-center bg-transparent h-75 w-100 g-1">
         <img
           src={props.image}
-          className="g-1 bg-image hover-zoom"
+          className="g-1 bg-image"
           style={{ width: "270px", height: "250px" }}
           alt=""
         />
@@ -55,7 +54,7 @@ const CategoryCardItem = (props) => {
           <div className="d-flex justify-content-around me-5 align-items-center gap-3">
             <div>
               <label
-                className="col-sm-2 col-form-label fw-bold"
+                className="col-sm-2 col-form-label fw-bold "
                 htmlFor="quantity"
                 style={{ color: "#FF6A3D" }}
               >
@@ -90,19 +89,19 @@ const CategoryCardItem = (props) => {
       <div className="d-flex justify-content-center align-items-center">
         <div>
           <a
+            className="text-success"
             role="button"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
             onClick={matchingId}
             href=" "
           >
-            <FontAwesomeIcon icon={faCircleInfo} /> More...
+            <FontAwesomeIcon icon={faCircleInfo} className="text-success" />{" "}
+            More...
           </a>
         </div>
 
         <Modal />
-
-        <div className="pt-3 fw-bold">{/* <p>{props.title}</p> */}</div>
       </div>
     </div>
   );

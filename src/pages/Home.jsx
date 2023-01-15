@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid  front-view-card bg-light text-dark  border-bottom  ">
-        <div className="row d-flex justify-content-center align-items-center  px-5">
-          <div className=" col-md-6">
+        <div className="row d-flex justify-content-center align-items-center pt-5 px-5">
+          <div className="mt-3 col-md-6">
             <h1 className="d-block text-center ">
               ONLINE SHOPPING MADE
               <span style={{ color: "#FF6A3D" }}> EASY </span>
@@ -18,7 +18,7 @@ const Home = () => {
               to you at your doorstep
             </p>
           </div>
-          <div className="  d-flex justify-content-center align-items-center col-md-6">
+          <div className="d-flex justify-content-center align-items-center col-md-6 px-5">
             <img className=" image-fluid" src={shoppingWoman} alt="" />
           </div>
         </div>

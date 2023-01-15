@@ -1,7 +1,7 @@
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useContext } from "react";
 
+import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import ShoppingCartItems from "./ShoppingCartItems";
 
 import CartContext from "../store/Cart-context";
@@ -24,15 +24,27 @@ const ShoppingCart = () => {
   }, 0);
 
   return (
-    <div className="shoppingCartIcon ">
-      Your cart
-      <button onClick={showCartItemHandler}>
-        <FontAwesomeIcon icon={faCartShopping} />
-        <span className="badge text-bg-secondary">{numberOfCartItems}</span>
-      </button>
+    <>
+      <div className="d-flex justify-content-evenly">
+        <div className="px-1">
+          <h1 className="fs-5">Your cart</h1>
+        </div>
+        <div className="px-3 mx-1 border border-3">
+          <button
+            style={{ background: "#1a2238", color: "white" }}
+            onClick={showCartItemHandler}
+          >
+            <FontAwesomeIcon
+              icon={faCartArrowDown}
+              className="border border-3"
+            />
+            <span className="badge text-bg-secondary">{numberOfCartItems}</span>
+          </button>
+        </div>
+      </div>
       {showCartItem && <ShoppingCartItems />}
       {showCartItem && <ShoppingCartItems setCloseCart={hideCartItemHandler} />}
-    </div>
+    </>
   );
 };
 

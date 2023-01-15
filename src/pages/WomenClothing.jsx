@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CategoryCardItem from "../components/CategoryCardItem";
 import Spinner from "../components/Spinner";
@@ -27,22 +26,26 @@ const MenClothing = () => {
 
   return (
     <>
-      <h1 className="text-center"> Women Clothing </h1>
       {loading ? (
         <Spinner />
       ) : (
         <div className="container pt-5">
           <ShoppingPageBackButton />
-          <div className="row row-cols-3">
+          <h1 className="text-center"> Women Clothing </h1>
+          <div className="row">
             {shoppingItems?.map((shoppingItem) => {
               return (
-                <CategoryCardItem
+                <div
+                  className="col-sm-12 col-md-6 col-lg-4"
                   key={shoppingItem.id}
-                  id={shoppingItem.id}
-                  image={shoppingItem.image}
-                  price={shoppingItem.price}
-                  title={shoppingItem.title}
-                />
+                >
+                  <CategoryCardItem
+                    id={shoppingItem.id}
+                    image={shoppingItem.image}
+                    price={shoppingItem.price}
+                    title={shoppingItem.title}
+                  />
+                </div>
               );
             })}
           </div>

@@ -3,21 +3,21 @@ import CategoryCardItem from "../components/CategoryCardItem";
 import Spinner from "../components/Spinner";
 import ShoppingPageBackButton from "../components/ShoppingPageBackButton";
 
-const Jewellery = () => {
-  const [shoppingItems, setShoppingItems] = useState([]);
+const AllCategory = () => {
+  const [allCategory, setAllCategory] = useState([]);
 
   const [loading, setLoading] = useState(false);
 
   const fetchData = () => {
     setLoading(true);
-    fetch("https://fakestoreapi.com/products/category/jewelery")
+    fetch("https://fakestoreapi.com/products")
       .then((response) => {
         setLoading(false);
         return response.json();
       })
       .then((data) => {
-        setShoppingItems(data);
         console.log(data);
+        setAllCategory(data);
       })
       .catch((error) => {
         console.log(error.message);
@@ -33,9 +33,10 @@ const Jewellery = () => {
       ) : (
         <div className="container pt-5">
           <ShoppingPageBackButton />
-          <h1 className="text-center"> Jewellery </h1>
+          <h1 className="text-center">All Products</h1>
+
           <div className="row">
-            {shoppingItems?.map((shoppingItem) => {
+            {allCategory?.map((shoppingItem) => {
               return (
                 <div className="col-sm-12 col-md-6 col-lg-4">
                   <CategoryCardItem
@@ -57,4 +58,4 @@ const Jewellery = () => {
   );
 };
 
-export default Jewellery;
+export default AllCategory;

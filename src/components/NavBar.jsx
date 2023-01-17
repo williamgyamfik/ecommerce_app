@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav
-      className="navbar navbar-dark text-light navbar-expand-lg navbar-expand-md navbar-expand-sm fixed-top"
+      className="py-0 navbar navbar-dark text-light navbar-expand-lg navbar-expand-md navbar-expand-sm fixed-top"
       style={{ background: "#1a2238" }}
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <h1>Rõivapood</h1>
+          <h1>e-kaubanduse pood</h1>
         </Link>
         <button
           className="navbar-toggler"

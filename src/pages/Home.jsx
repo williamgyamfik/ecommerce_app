@@ -1,7 +1,6 @@
 import Category from "./Category";
 import shoppingWoman from "../images/womanShopping.png";
 import Form from "../components/Form";
-import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -40,7 +39,6 @@ const Home = () => {
         </h2>
       </div>
       <Form />
-      <Footer />
     </>
   );
 };

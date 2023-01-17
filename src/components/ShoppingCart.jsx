@@ -25,19 +25,16 @@ const ShoppingCart = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-evenly">
+      <div className="d-flex justify-content-center">
         <div className="px-1">
           <h1 className="fs-5">Your cart</h1>
         </div>
-        <div className="px-3 mx-1 border border-3">
+        <div className="px-3 mx-1 d-flex justify-content-center align-items-center">
           <button
             style={{ background: "#1a2238", color: "white" }}
             onClick={showCartItemHandler}
           >
-            <FontAwesomeIcon
-              icon={faCartArrowDown}
-              className="border border-3"
-            />
+            <FontAwesomeIcon icon={faCartArrowDown} />
             <span className="badge text-bg-secondary">{numberOfCartItems}</span>
           </button>
         </div>

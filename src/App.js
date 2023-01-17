@@ -8,8 +8,8 @@ import Category from "./pages/Category";
 import ErrorPage from "./pages/Error";
 import CategoryContainer from "./pages/CategoryContainer";
 import CartProvider from "./store/CartProvider";
-// import { Modal } from "bootstrap";
 import AllCategory from "./pages/AllCategory";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
             <Route path="/allcategory" element={<AllCategory />} />
             <Route path="*" element={<ErrorPage />}></Route>
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     </CartProvider>

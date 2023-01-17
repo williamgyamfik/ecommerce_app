@@ -1,31 +1,90 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div
-      className="text-light text-center px-5 py-5"
+      className="text-light text-center px-2 py-3 container-fluid"
       style={{ background: "#1a2238" }}
     >
-      <div className="d-flex justify-content-evenly ">
-        <div>
-          <h1>Product</h1>
-          <p>Mens category</p>
-          <p>Jewelry category</p>
-          <p>Clothing category</p>
-          <p>Womens category</p>
-        </div>
-        <div>
-          <h1>Support</h1>
-          <p>Help</p>
-          <p>Shipping</p>
-          <p>Order Tracking</p>
-          <p>Customer Service</p>
-          <p>Return and Exchanges</p>
-        </div>
-        <div>
-          <h1>About Us</h1>
-          <p>Career</p>
-          <p>Company apps</p>
-          <p>Jewelry category</p>
-          <p>Clothing category</p>
+      <div className="row">
+        <div className="d-flex justify-content-center px-3 py-3 ">
+          <div className=" w-100 px-3 py-3">
+            <h1>Product</h1>
+            <ul className=" pe-3 ">
+              <li>
+                <Link className="text-white" to="/allcategory">
+                  All category
+                </Link>
+              </li>
+              <li>
+                <Link className="text-white" to="/category/2">
+                  Jewellery
+                </Link>
+              </li>
+              <li>
+                <Link className="text-white" to="/category/1">
+                  Electronics
+                </Link>
+              </li>
+
+              <li>
+                <Link className="text-white" to="/category/3">
+                  Mens clothing
+                </Link>
+              </li>
+
+              <li>
+                <Link className="text-white" to="/category/4">
+                  Women Clothing
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="w-100 px-3 py-3">
+            <h1>Support</h1>
+            <ul className=" pe-3 ">
+              <li>
+                <Link className="text-white" to="">
+                  Help
+                </Link>
+              </li>
+              <li>
+                <Link className="text-white" to="">
+                  Shipping
+                </Link>
+              </li>
+              <li>
+                <Link className="text-white" to="">
+                  Order Tracking
+                </Link>
+              </li>
+
+              <li>
+                <Link className="text-white" to="">
+                  Customer Service
+                </Link>
+              </li>
+
+              <li>
+                <Link className="text-white" to="">
+                  Return and Exchanges
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="w-100 px-3 py-3">
+            <h1>About Us</h1>
+            <ul className=" pe-3 ">
+              <li>
+                <Link className="text-white" to="">
+                  Career
+                </Link>
+              </li>
+              <li>
+                <Link className="text-white">Company apps</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

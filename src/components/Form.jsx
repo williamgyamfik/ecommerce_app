@@ -35,9 +35,9 @@ const Form = () => {
         </h1>
       </div>
 
-      <div className="container-md w-75 d-flex justify-content-center bg-light rounded-5 border border-3 shadow-lg px-5 mb-5">
+      <div className="container w-75 d-flex justify-content-center bg-light rounded-5 border border-3 shadow-lg px-5 mb-5">
         <div className="row">
-          <div className="d-flex justify-content-center align-items-center col-md-6 pt-5 pb-5 col-md-12 ">
+          <div className="d-flex justify-content-center align-items-center pb-5 col-md-6 pt-5 col-md-12 ">
             <form
               className="bg-light pt-3 pb-5 text-center "
               onSubmit={submitFormHandler}

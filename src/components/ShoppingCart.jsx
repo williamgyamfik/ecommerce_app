@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import ShoppingCartItems from "./ShoppingCartItems";
@@ -29,9 +29,10 @@ const ShoppingCart = () => {
         <div className="px-1">
           <h1 className="fs-5">Your cart</h1>
         </div>
-        <div className="px-3 mx-1 d-flex justify-content-center align-items-center">
+        <div className="px-1 mx-1 ">
           <button
-            style={{ background: "#1a2238", color: "white" }}
+            // className="border-none"
+            style={{ background: "none", color: "white", border: "none" }}
             onClick={showCartItemHandler}
           >
             <FontAwesomeIcon icon={faCartArrowDown} />

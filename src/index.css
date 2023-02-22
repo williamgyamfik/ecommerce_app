@@ -175,4 +175,10 @@ a {
 }
 
 
+/* @media screen and (max-width: 576px) 
+{
+    body {
+        font-size: 1.5em;
+    }
+} */
 

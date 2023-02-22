@@ -1,92 +1,63 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faHeartCircleBolt } from "@fortawesome/free-solid-svg-icons";
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div
-      className="text-light text-center px-2 py-3 container-fluid"
-      style={{ background: "#1a2238" }}
+      className="container-fluid pt-3 "
+      style={{ backgroundColor: "#1a2238" }}
     >
-      <div className="row">
-        <div className="d-flex justify-content-center px-3 py-3 ">
-          <div className=" w-100 px-3 py-3">
-            <h1>Product</h1>
-            <ul className=" pe-3 ">
-              <li>
-                <Link className="text-white" to="/allcategory">
-                  All category
-                </Link>
-              </li>
-              <li>
-                <Link className="text-white" to="/category/2">
-                  Jewellery
-                </Link>
-              </li>
-              <li>
-                <Link className="text-white" to="/category/1">
-                  Electronics
-                </Link>
-              </li>
-
-              <li>
-                <Link className="text-white" to="/category/3">
-                  Mens clothing
-                </Link>
-              </li>
-
-              <li>
-                <Link className="text-white" to="/category/4">
-                  Women Clothing
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="w-100 px-3 py-3">
-            <h1>Support</h1>
-            <ul className=" pe-3 ">
-              <li>
-                <Link className="text-white" to="">
-                  Help
-                </Link>
-              </li>
-              <li>
-                <Link className="text-white" to="">
-                  Shipping
-                </Link>
-              </li>
-              <li>
-                <Link className="text-white" to="">
-                  Order Tracking
-                </Link>
-              </li>
-
-              <li>
-                <Link className="text-white" to="">
-                  Customer Service
-                </Link>
-              </li>
-
-              <li>
-                <Link className="text-white" to="">
-                  Return and Exchanges
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="w-100 px-3 py-3">
-            <h1>About Us</h1>
-            <ul className=" pe-3 ">
-              <li>
-                <Link className="text-white" to="">
-                  Career
-                </Link>
-              </li>
-              <li>
-                <Link className="text-white">Company apps</Link>
-              </li>
-            </ul>
-          </div>
+      <footer className="text-center text-lg-start">
+        <div className="container d-flex justify-content-center py-1">
+          <button
+            type="button"
+            className="btn btn-primary btn-lg btn-floating mx-2"
+          >
+            <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
+          </button>
+          <button
+            type="button"
+            className="btn btn-danger btn-lg btn-floating mx-2"
+          >
+            <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+          </button>
+          <button
+            type="button"
+            className="btn btn-primary btn-lg btn-floating mx-2"
+          >
+            <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+          </button>
+          <Link href="https://github.com/williamgyamfik">
+            <button
+              type="button"
+              className="btn btn-light btn-lg btn-floating mx-2"
+            >
+              <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+            </button>
+          </Link>
         </div>
-      </div>
+
+        <div className="text-center text-white  p-3">
+          <h4>E-kaubanduse pood </h4>
+          <p>
+            Made with
+            <span>
+              <FontAwesomeIcon
+                style={{ color: "red" }}
+                icon={faHeartCircleBolt}
+                size="2x"
+              ></FontAwesomeIcon>
+            </span>
+            by dev William
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
